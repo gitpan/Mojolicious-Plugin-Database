@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Mojolicious-Plugin-Database
-version:            v0.01
+version:            v0.02
 abstract:           "proper" handling of DBI based connections in Mojolicious
 author:
     - Ben van Staveren <madcat@cpan.org>
