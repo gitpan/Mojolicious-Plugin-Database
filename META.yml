@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Mojolicious-Plugin-Database
-version:            v0.02
+version:            v0.03
 abstract:           "proper" handling of DBI based connections in Mojolicious
 author:
     - Ben van Staveren <madcat@cpan.org>
@@ -11,9 +11,10 @@ configure_requires:
 build_requires:
     ExtUtils::MakeMaker:  0
 requires:
-    DBI:         0
-    Test::More:  0
-    version:     0
+    DBI:          0
+    Mojolicious:  0
+    Test::More:   0
+    version:      0
 no_index:
     directory:
         - t
