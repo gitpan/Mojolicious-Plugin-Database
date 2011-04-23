@@ -1,25 +1,25 @@
---- #YAML:1.0
-name:               Mojolicious-Plugin-Database
-version:            v0.03
-abstract:           "proper" handling of DBI based connections in Mojolicious
+---
+abstract: 'Mojolicious plugin to make usage of DBI a bit easier'
 author:
-    - Ben van Staveren <madcat@cpan.org>
-license:            perl
-distribution_type:  module
-configure_requires:
-    ExtUtils::MakeMaker:  0
+  - 'Ben van Staveren <madcat@cpan.org>'
 build_requires:
-    ExtUtils::MakeMaker:  0
-requires:
-    DBI:          0
-    Mojolicious:  0
-    Test::More:   0
-    version:      0
-no_index:
-    directory:
-        - t
-        - inc
-generated_by:       ExtUtils::MakeMaker version 6.56
+  Test::Mojo: 0
+  Test::More: 0
+configure_requires:
+  Module::Build: 0.38
+dynamic_config: 1
+generated_by: 'Module::Build version 0.38, CPAN::Meta::Converter version 2.110930'
+license: perl
 meta-spec:
-    url:      http://module-build.sourceforge.net/META-spec-v1.4.html
-    version:  1.4
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Mojolicious-Plugin-Database
+provides:
+  Mojolicious::Plugin::Database:
+    file: lib/Mojolicious/Plugin/Database.pm
+    version: 1.04
+requires:
+  Mojolicious: 1.21
+resources:
+  license: http://dev.perl.org/licenses/
+version: 1.04
