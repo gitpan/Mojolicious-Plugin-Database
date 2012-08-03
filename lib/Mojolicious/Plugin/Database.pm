@@ -1,8 +1,8 @@
 use strict;
 use warnings;
 package Mojolicious::Plugin::Database;
-BEGIN {
-  $Mojolicious::Plugin::Database::VERSION = '1.05';
+{
+  $Mojolicious::Plugin::Database::VERSION = '1.06';
 }
 use Mojo::Base 'Mojolicious::Plugin';
 use DBI;
@@ -14,7 +14,11 @@ sub register {
 
     die ref($self), ': missing dsn parameter', "\n" unless($conf->{dsn});
 
-    $app->attr('dbh' => sub { DBI->connect($conf->{dsn}, $conf->{username}, $conf->{password}, $conf->{options}) });
+    my $dbh_connect = sub { DBI->connect($conf->{dsn}, $conf->{username}, $conf->{password}, $conf->{options}) };
+
+    $app->attr('dbh' => sub { 
+        DBI->connect($conf->{dsn}, $conf->{username}, $conf->{password}, $conf->{options}) 
+    });
 
     my $helper_name = $conf->{helper} || 'db';
     $app->helper($helper_name => sub { return shift->app->dbh });
@@ -29,7 +33,7 @@ Mojolicious::Plugin::Database - "proper" handling of DBI based connections in Mo
 
 =head1 VERSION
 
-version 1.05
+version 1.06
 
 =head1 SYNOPSIS
 

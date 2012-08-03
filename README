@@ -1,13 +1,76 @@
+NAME
+    Mojolicious::Plugin::Database - "proper" handling of DBI based
+    connections in Mojolicious
 
+VERSION
+    version 1.06
 
-This archive contains the distribution Mojolicious-Plugin-Database,
-version 1.05:
+SYNOPSIS
+    Provides "sane" handling of DBI connections so problems with pre-forking
+    (Hypnotoad, etc.) will not occur.
 
-  "proper" handling of DBI based connections in Mojolicious
+        use Mojolicious::Plugin::Database;
 
-This software is copyright (c) 2011 by Ben van Staveren.
+        sub startup {
+            my $self = shift;
 
-This is free software; you can redistribute it and/or modify it under
-the same terms as the Perl 5 programming language system itself.
+            $self->plugin('database', { 
+                dsn      => 'dbi:Pg:dbname=foo',
+                username => 'myusername',
+                password => 'mypassword',
+                options  => { 'pg_enable_utf8' => 1, AutoCommit => 0 },
+                helper   => 'db',
+                });
+        }
 
+CONFIGURATION
+    The only required option is the 'dsn' one, which should contain a valid
+    DBI dsn to connect to your database of choice.
+
+METHODS/HELPERS
+    A helper is created with a name you specified (or 'db' by default) that
+    can be used to get the active DBI connection.
+
+AUTHOR
+    Ben van Staveren, "<madcat at cpan.org>"
+
+BUGS/CONTRIBUTING
+    Please report any bugs or feature requests to through the web interface
+    at
+    <https://github.com/benvanstaveren/mojolicious-plugin-database/issues>.
+    If you want to contribute changes or otherwise involve yourself in
+    development, feel free to fork the Git repository from
+    <https://github.com/benvanstaveren/mojolicious-plugin-database/>.
+
+SUPPORT
+    You can find documentation for this module with the perldoc command.
+
+        perldoc Mojolicious::Plugin::Database
+
+    You can also look for information at:
+
+    *   AnnoCPAN: Annotated CPAN documentation
+
+        <http://annocpan.org/dist/Mojolicious-Plugin-Database>
+
+    *   CPAN Ratings
+
+        <http://cpanratings.perl.org/d/Mojolicious-Plugin-Database>
+
+    *   Search CPAN
+
+        <http://search.cpan.org/dist/Mojolicious-Plugin-Database/>
+
+ACKNOWLEDGEMENTS
+    Based on a small example by sri and his request if someone could please
+    write a plugin for this stuff.
+
+LICENSE AND COPYRIGHT
+    Copyright 2011 Ben van Staveren.
+
+    This program is free software; you can redistribute it and/or modify it
+    under the terms of either: the GNU General Public License as published
+    by the Free Software Foundation; or the Artistic License.
+
+    See http://dev.perl.org/licenses/ for more information.
 

@@ -6,8 +6,9 @@ META.json
 META.yml
 Makefile.PL
 README
+README.pod
 dist.ini
 lib/Mojolicious/Plugin/Database.pm
 t/00-load.t
 t/01-functional.t
-t/author-critic.t
+t/release-cpan-changes.t

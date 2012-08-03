@@ -4,7 +4,7 @@
       "Ben van Staveren <madcat@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.200004, CPAN::Meta::Converter version 2.110930",
+   "generated_by" : "Dist::Zilla version 4.300020, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "perl_5"
    ],
@@ -21,24 +21,25 @@
       },
       "configure" : {
          "requires" : {
-            "ExtUtils::MakeMaker" : "6.31",
+            "ExtUtils::MakeMaker" : "6.30",
             "Module::Build" : "0.38"
          }
       },
       "runtime" : {
          "requires" : {
-            "DBI" : 0,
-            "Mojo::Base" : 0
+            "DBI" : "0",
+            "Mojo::Base" : "0",
+            "strict" : "0",
+            "warnings" : "0"
          }
       },
       "test" : {
          "requires" : {
-            "DBD::SQLite" : 0,
-            "English" : 0,
-            "Mojolicious::Lite" : 0,
-            "Test::Mojo" : 0,
-            "Test::More" : 0,
-            "Try::Tiny" : 0
+            "DBD::SQLite" : "0",
+            "Mojolicious::Lite" : "0",
+            "Test::Mojo" : "0",
+            "Test::More" : "0",
+            "Try::Tiny" : "0"
          }
       }
    },
@@ -47,12 +48,13 @@
       "bugtracker" : {
          "web" : "https://github.com/benvanstaveren/Mojolicious-Plugin-Database/issues"
       },
+      "homepage" : "http://search.cpan.org/dist/Mojolicious-Plugin-Database/",
       "repository" : {
          "type" : "git",
          "url" : "git://github.com/benvanstaveren/Mojolicious-Plugin-Database.git",
          "web" : "https://github.com/benvanstaveren/Mojolicious-Plugin-Database"
       }
    },
-   "version" : "1.05"
+   "version" : "1.06"
 }
 
