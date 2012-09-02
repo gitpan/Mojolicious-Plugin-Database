@@ -8,6 +8,7 @@ use Module::Build 0.38;
 my %module_build_args = (
   "build_requires" => {
     "DBD::SQLite" => 0,
+    "File::Temp" => 0,
     "Module::Build" => "0.38",
     "Mojolicious::Lite" => 0,
     "Test::Mojo" => 0,
@@ -23,7 +24,7 @@ my %module_build_args = (
     "Ben van Staveren <madcat\@cpan.org>"
   ],
   "dist_name" => "Mojolicious-Plugin-Database",
-  "dist_version" => "1.06",
+  "dist_version" => "1.07",
   "license" => "perl",
   "module_name" => "Mojolicious::Plugin::Database",
   "recommends" => {},

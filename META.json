@@ -36,6 +36,7 @@
       "test" : {
          "requires" : {
             "DBD::SQLite" : "0",
+            "File::Temp" : "0",
             "Mojolicious::Lite" : "0",
             "Test::Mojo" : "0",
             "Test::More" : "0",
@@ -55,6 +56,6 @@
          "web" : "https://github.com/benvanstaveren/Mojolicious-Plugin-Database"
       }
    },
-   "version" : "1.06"
+   "version" : "1.07"
 }
 

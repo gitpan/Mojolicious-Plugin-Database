@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package Mojolicious::Plugin::Database;
 {
-  $Mojolicious::Plugin::Database::VERSION = '1.06';
+  $Mojolicious::Plugin::Database::VERSION = '1.07';
 }
 use Mojo::Base 'Mojolicious::Plugin';
 use DBI;
@@ -16,9 +16,7 @@ sub register {
 
     my $dbh_connect = sub { DBI->connect($conf->{dsn}, $conf->{username}, $conf->{password}, $conf->{options}) };
 
-    $app->attr('dbh' => sub { 
-        DBI->connect($conf->{dsn}, $conf->{username}, $conf->{password}, $conf->{options}) 
-    });
+    $app->attr('dbh' => $dbh_connect);
 
     my $helper_name = $conf->{helper} || 'db';
     $app->helper($helper_name => sub { return shift->app->dbh });
@@ -33,7 +31,7 @@ Mojolicious::Plugin::Database - "proper" handling of DBI based connections in Mo
 
 =head1 VERSION
 
-version 1.06
+version 1.07
 
 =head1 SYNOPSIS
 
@@ -101,9 +99,11 @@ L<http://search.cpan.org/dist/Mojolicious-Plugin-Database/>
 
 Based on a small example by sri and his request if someone could please write a plugin for this stuff.
 
+alabamapaul (github) for fixing the tests to work on Windows
+
 =head1 LICENSE AND COPYRIGHT
 
-Copyright 2011 Ben van Staveren.
+Copyright 2011, 2012 Ben van Staveren.
 
 This program is free software; you can redistribute it and/or modify it
 under the terms of either: the GNU General Public License as published

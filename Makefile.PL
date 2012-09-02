@@ -13,6 +13,7 @@ my %WriteMakefileArgs = (
   "AUTHOR" => "Ben van Staveren <madcat\@cpan.org>",
   "BUILD_REQUIRES" => {
     "DBD::SQLite" => 0,
+    "File::Temp" => 0,
     "Module::Build" => "0.38",
     "Mojolicious::Lite" => 0,
     "Test::Mojo" => 0,
@@ -33,7 +34,7 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "1.06",
+  "VERSION" => "1.07",
   "test" => {
     "TESTS" => "t/*.t"
   }

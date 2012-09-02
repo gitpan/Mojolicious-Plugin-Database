@@ -1,5 +1,8 @@
 Revision history for Mojolicious-Plugin-Database
 
+1.07      2012-09-02 18:10:10 Asia/Jakarta
+    Updated tests to use tmpnam() so that things will work on Windows (alabamapaul)
+
 1.06      2012-08-04 05:02:43 Asia/Jakarta
     Changed the way the DBI connection is made; instead of doing this 
     on startup which would cause bad things(tm) to happen when running
