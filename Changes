@@ -1,5 +1,8 @@
 Revision history for Mojolicious-Plugin-Database
 
+1.08      2012-11-24 12:58:12 Asia/Jakarta
+    Added the ability to connect to multiple databases at the same time.
+
 1.07      2012-09-02 18:10:10 Asia/Jakarta
     Updated tests to use tmpnam() so that things will work on Windows (alabamapaul)
 

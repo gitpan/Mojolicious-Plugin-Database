@@ -14,15 +14,9 @@
    },
    "name" : "Mojolicious-Plugin-Database",
    "prereqs" : {
-      "build" : {
-         "requires" : {
-            "Module::Build" : "0.38"
-         }
-      },
       "configure" : {
          "requires" : {
-            "ExtUtils::MakeMaker" : "6.30",
-            "Module::Build" : "0.38"
+            "ExtUtils::MakeMaker" : "6.30"
          }
       },
       "runtime" : {
@@ -56,6 +50,6 @@
          "web" : "https://github.com/benvanstaveren/Mojolicious-Plugin-Database"
       }
    },
-   "version" : "1.07"
+   "version" : "1.08"
 }
 

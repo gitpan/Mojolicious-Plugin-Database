@@ -1,4 +1,3 @@
-Build.PL
 Changes
 LICENSE
 MANIFEST
@@ -10,5 +9,6 @@ README.pod
 dist.ini
 lib/Mojolicious/Plugin/Database.pm
 t/00-load.t
-t/01-functional.t
+t/01-functional-single.t
+t/02-functional-multi.t
 t/release-cpan-changes.t

@@ -5,14 +5,12 @@ author:
 build_requires:
   DBD::SQLite: 0
   File::Temp: 0
-  Module::Build: 0.38
   Mojolicious::Lite: 0
   Test::Mojo: 0
   Test::More: 0
   Try::Tiny: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.30
-  Module::Build: 0.38
 dynamic_config: 0
 generated_by: 'Dist::Zilla version 4.300020, CPAN::Meta::Converter version 2.120921'
 license: perl
@@ -29,4 +27,4 @@ resources:
   bugtracker: https://github.com/benvanstaveren/Mojolicious-Plugin-Database/issues
   homepage: http://search.cpan.org/dist/Mojolicious-Plugin-Database/
   repository: git://github.com/benvanstaveren/Mojolicious-Plugin-Database.git
-version: 1.07
+version: 1.08

@@ -14,15 +14,13 @@ my %WriteMakefileArgs = (
   "BUILD_REQUIRES" => {
     "DBD::SQLite" => 0,
     "File::Temp" => 0,
-    "Module::Build" => "0.38",
     "Mojolicious::Lite" => 0,
     "Test::Mojo" => 0,
     "Test::More" => 0,
     "Try::Tiny" => 0
   },
   "CONFIGURE_REQUIRES" => {
-    "ExtUtils::MakeMaker" => "6.30",
-    "Module::Build" => "0.38"
+    "ExtUtils::MakeMaker" => "6.30"
   },
   "DISTNAME" => "Mojolicious-Plugin-Database",
   "EXE_FILES" => [],
@@ -34,7 +32,7 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "1.07",
+  "VERSION" => "1.08",
   "test" => {
     "TESTS" => "t/*.t"
   }
